@@ -1,0 +1,42 @@
+{% extends 'owner/master_page.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/manage_prod.css' %}">
+{% endblock %}
+{% block content %}
+
+
+<h1 style="color: rgb(78, 72, 72); text-align:center;">PURCHASE REQUEST</h1>
+
+<br><br>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>REQUEST ID</th>
+                <th>PRODUCT</th>
+                <th>BRAND</th>
+                <th>CUSTOMER</th>
+                <th>RATE</th>
+                <th>VIEW MORE</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in order_list %}
+            <tr>
+                <td>{{order.id}}</td>
+                <td>{{order.mobile_details.mobile_name}}</td>
+                <td>{{order.mobile_details.mobile_brand}}</td>
+                <td>{{order.customer.name}}</td>
+                <td>{{order.mobile_details.mobile_rate}}</td>
+                <td><a href="#" class='btn btn-warning' > More </a></td> 
+                
+            </tr>
+            {% endfor %}  
+        </tbody>
+    </table>
+</div>
+{% endblock  %}

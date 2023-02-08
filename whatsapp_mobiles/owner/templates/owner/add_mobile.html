@@ -1,0 +1,60 @@
+{% extends 'owner/master_page.html' %}
+{% block content %}
+{% load static %}
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div>
+    <!-- heading  -->
+    <h1 style="color: rgb(78, 72, 72); text-align:center;">Add Mobile</h1>
+    <div style="width: 55%; margin:auto">
+      <br> <br>
+     <div style="margin: auto; color: green;"> {{msg}} </div> 
+<br> <br >
+      <!-- Model Name -->
+
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Model Name</label>
+        <div class="col-sm-10">
+          <input type="text" name="Model-name" class="form-control" >
+        </div>
+      </div>
+
+      <!-- Brand -->
+
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Brand</label>
+        <div class="col-sm-10">
+          <select  name="brand" class="form-select" aria-label="Default select example">
+            <option selected>Samsung</option>
+            <option>Apple</option>
+            <option value="1">RealMe</option>
+            <option value="2">Oppo</option>
+            <option value="3">MI</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Rate  -->
+
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Rate</label>
+        <div class="col-sm-10">
+          <input type="text" name="rate" class="form-control" >
+        </div>
+      </div>
+
+
+      <!-- upload image  -->
+
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Upload image</label>
+        <div class="col-sm-10">
+          <input type="file" name="image" class="form-control" >
+        </div>
+      </div>
+      <br> <br>
+      <!-- register button  -->
+      <button type="submit" class="btn btn-primary" style="margin-left:400px ;" id="btn">Add Mobile</button>
+    </div>
+</form>
+{% endblock %}

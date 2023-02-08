@@ -1,0 +1,23 @@
+.search_bar::placeholder{
+    text-align: center;
+    font-weight: 500;
+    font-size: x-large;
+
+}
+table{width: 100%;
+    border: 2px solid black;
+    text-align: center; 
+}
+tbody>tr:hover{
+    color: aliceblue;
+    background-color: rgb(127, 128, 130);
+}
+
+
+thead>tr{
+    background-color: rgb(56, 58, 55);
+    color: aliceblue;
+}
+th{
+    height: 50px;
+}
